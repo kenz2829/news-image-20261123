@@ -125,16 +125,16 @@ carries its outlet or official source in the image (`Zelenskyy says…`,
 
 | # | Story | Source |
 |---|---|---|
-| 1 | COP31 collapses in Antalya with no deal — record overtime, EU rejects a draft with no fossil-fuel phase-out. Talks ended Sunday 22 Nov, reported Monday 23 Nov. | CNN, NHK, Al Jazeera, Reuters |
-| 2 | Ukraine sinks a Russian warship at Benghazi, Libya — Zelenskyy says seven naval drones hit it on Sunday. | Reuters, Japan Times |
-| 3 | Nvidia reinstates Jensen Huang as CEO — shares jump 31% on Monday after Trump pressure; Nasdaq +6.5%. | Reuters (Trading Day), Bloomberg, Daily Mirror |
+| 1 | COP31 ends with no deal — Antalya pact rejected; EU and island states refuse a text with no fossil-fuel phase-out. Collapse was Sunday 22 Nov; Monday 23 Nov is when it led the news cycle (CNN, Le Monde, Atlantic Council analysis 23 Nov). | CNN, Le Monde, Atlantic Council, Carbon Brief |
+| 2 | Ukraine says drones hit a Russian warship at Benghazi, Libya — Zelenskyy says seven naval drones hit corvette Merkury on Monday; cargo ship MV Angara also hit. | Reuters, CNN, AP, WSJ |
+| 3 | Nvidia reinstates Jensen Huang as CEO — board announces it Monday 23 Nov; shares jump 31.48% on Monday; Nasdaq +6.5%. | Reuters (23 Nov), Motley Fool |
 | 4 | Israeli strikes in Gaza kill UNRWA worker Adel al-Helo near a well in Jabalia; three others hurt. | Reuters, Al Jazeera, WAFA |
 | 5 | Belgium's national austerity strike grounds all flights — Brussels Airport cancels 429 flights, 07:00–21:00. | BBC, QNC News |
 | 6 | Heavy fighting near a hospital in Ituri, DR Congo, forces Ebola responders to shelter for over 24 hours. | UN News / WHO |
 | 7 | South Korea readies an ~$8bn (10.8tn won) market stabilisation fund after the Kospi falls almost 6% at its low. | Reuters, InvestingLive |
 | 8 | US Treasury sanctions more than two dozen Iranian entities over "shadow banking"; Tehran warns of a response. | US Treasury via The Brief / Reuters |
 | 9 | Democrats win 258 US House seats — Hubbard beats Foxx in North Carolina; largest House majority since 1992. | AP / CBS via Khaleej Times, Al Jazeera |
-| 10 | 49ers rout the Vikings in Mexico City as the NFL wraps up its international slate. | Japan Times |
+| 10 | Commanders stun Bengals 22-20 on Monday Night Football — Jayden Daniels leads a late drive; Drew Stevens kicks a 26-yard field goal as time expires. | TSN, Cincinnati Bengals |
 | 11 | Pacific despair after the COP31 failure — Marshall Islands say they were "let down on all sides"; Australia faces calls to sack minister Chris Bowen. | Reuters via Japan Times / GMA |
 
 ### Digest — stories 12–35
@@ -181,6 +181,32 @@ carries its outlet or official source in the image (`Zelenskyy says…`,
    released 20 Nov, reported by UN News / WHO on 23 Nov.
 6. **Brent crude: $91.94/barrel**, down 0.68% on the day. (Hindu BusinessLine,
    23 Nov close)
+
+## Verification performed (v3 — 24 Nov evening, before submission)
+
+- v3 revises four stories after a fresh web search on 23 Nov reporting:
+  #1 COP31 reworded to "COP31 ENDS WITH NO DEAL" (collapse was Sunday 22 Nov per
+  CNN/Le Monde; Monday 23 Nov briefing and fallout are the Monday news);
+  #2 reworded to the attributed claim "UKRAINE SAYS DRONES HIT RUSSIAN SHIP",
+  "Sunday" removed (Zelenskyy announced it Monday 23 Nov, CNN/AP/WSJ);
+  #3 kept — verified real Monday 23 Nov: Reuters 23 Nov "Nvidia reinstates Jensen
+  Huang as CEO", shares +31.48%, Nasdaq +6.5%; headline reworded to "NVIDIA
+  REINSTATES HUANG AS CEO"; #10 49ers (Sunday-night game, 22 Nov) replaced by
+  verified Monday-night game Commanders 22-20 Bengals, 23 Nov (TSN), pin moved
+  from Mexico City to Northwest Stadium, Maryland, with a leader offset so it
+  does not collide with pin 9 (Washington DC); min pin distance 25.6 px.
+- Ran `python3 -P -s main.py` three times: all wrote `output/entry.png`,
+  **47,563 bytes, 1024×1024, SHA-256
+  `f9d137f01da3a67151610a61d6be6e11319d2c7a625e61f26138036f71ea2f92` —
+  byte-identical**. Text-fit check (same wrap function as the renderer): hero
+  headlines ≤3 lines, hero summaries ≤2 lines, medium headlines ≤3 lines,
+  medium summaries ≤3 lines, digest headlines ≤221 px and details ≤293 px in a
+  316 px column, title 959 px in 992 px, KPI 605 px. No `...` truncation, no
+  clipping found on visual inspection at full size.
+- Honest limit on the visual-polish ask: true anti-aliasing is not possible in
+  this pure-stdlib renderer — there is no font engine, only a hand-built 5×7
+  bitmap font and flat vector shapes, so the type stays chunky pixel by design.
+  No AA was faked; the polish done is the verified no-clipping check above.
 
 ## Verification performed (v2)
 

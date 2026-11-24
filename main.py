@@ -272,7 +272,7 @@ PINS = [
     (7, 126.98, 37.57, 0, 0),
     (8, 51.39, 35.69, 8, -12),
     (9, -77.04, 38.9, 0, 0),
-    (10, -99.13, 19.43, 0, 0),
+    (10, -76.86, 38.93, 20, -16),
     (11, 151.21, -33.87, 0, 0),
 ]
 PIN_REGIONS = ["WORLD", "EUROPE", "AMERICAS", "MIDDLE EAST", "EUROPE",
@@ -444,16 +444,21 @@ def draw_hero(cv, x, y, w, h, kind):
             cv.draw_line(chip_x + 46 + dx, chip_y + 62, chip_x + 46 + dx, chip_y + 74, GOLD, 2)
         cv.draw_text(x + w - 72, y + h - 16, "+31%", 2, GOLD, align="center")
 
-# ---- Data: EXACTLY the 35 v1 stories, no Rank 1 (17 Nov) stories ----
+# ---- Data: 35 stories; v3 (24 Nov) revises #1-3 and #10 to Monday-verified wording ----
+# #1 COP31: pact rejected in Antalya, reported/analysed Monday 23 Nov (CNN/Le Monde dated
+# the collapse Sunday 22 Nov; Monday briefing + fallout are the Monday news).
+# #2 Ukraine: attack claimed by Zelenskyy on Monday 23 Nov (CNN/AP/WSJ).
+# #3 Nvidia: reinstated by the board Monday 23 Nov, shares +31.48% (Reuters, 23 Nov).
+# #10 Commanders-Bengals: Monday Night Football, 23 Nov, 22-20 (TSN, 23 Nov 23:33 EST).
 FEATURES = [
     (1, "WORLD", "Reuters", "summit",
-     "COP31 COLLAPSES WITH NO DEAL",
-     "Antalya talks end after record overtime. EU rejects draft with no fossil-fuel phase-out."),
+     "COP31 ENDS WITH NO DEAL",
+     "Antalya pact rejected; EU and island states refuse a text with no fossil-fuel phase-out."),
     (2, "EUROPE", "Reuters", "naval",
-     "UKRAINE SINKS RUSSIAN SHIP OFF LIBYA",
-     "Zelenskyy says seven naval drones hit a Russian warship at Benghazi port on Sunday."),
-    (3, "AMERICAS", "Bloomberg", "tech",
-     "NVIDIA BRINGS BACK HUANG AS CEO",
+     "UKRAINE SAYS DRONES HIT RUSSIAN SHIP",
+     "Zelenskyy says seven naval drones hit corvette Merkury at Benghazi; cargo ship also hit."),
+    (3, "AMERICAS", "Reuters", "tech",
+     "NVIDIA REINSTATES HUANG AS CEO",
      "Shares jump 31% on Monday after Trump pressure. Nasdaq rises 6.5% in relief rally."),
     (4, "MIDDLE EAST", "Al Jazeera", "health",
      "GAZA STRIKES KILL UN AID WORKER",
@@ -473,9 +478,9 @@ FEATURES = [
     (9, "AMERICAS", "AP", "elections",
      "DEMOCRATS WIN 258 HOUSE SEATS",
      "Hubbard beats Foxx in North Carolina. It is the largest House majority since 1992."),
-    (10, "AMERICAS", "AP", "sports",
-     "49ERS ROUT VIKINGS IN MEXICO CITY",
-     "San Francisco wins as the NFL wraps up its international slate in style on Monday."),
+    (10, "AMERICAS", "TSN", "sports",
+     "COMMANDERS STUN BENGALS 22-20",
+     "Jayden Daniels leads a late drive; Stevens kicks a 26-yard field goal as time expires."),
     (11, "OCEANIA", "Reuters", "climate",
      "PACIFIC DESPAIR AFTER COP31 FAILURE",
      "Marshall Islands say they were let down on all sides. Australia faces calls to sack Bowen."),
@@ -615,7 +620,7 @@ def build():
     cv.fill_rect(8, 984, 1008, 32, NAVY)
     cv.fill_rect(8, 984, 1008, 3, GOLD)
     cv.draw_text(512, 992, "Every story here happened or was first reported on Monday 23 November 2026. Contested claims are marked as claims.", 1, WHITE, align="center")
-    cv.draw_text(512, 1004, "Sources: Reuters, AP, AFP, BBC, Al Jazeera, WHO, UN. Original drawings.", 1, GOLD, align="center")
+    cv.draw_text(512, 1004, "Sources: Reuters, AP, AFP, BBC, Al Jazeera, WHO, UN, TSN. Original drawings.", 1, GOLD, align="center")
     return cv
 
 def main():
